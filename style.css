@@ -1,0 +1,63 @@
+html {
+  background-color: #e5e5e5;
+  font-family: "Montserrat", sans-serif;
+}
+html a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  max-width: 1600px;
+  padding: 0 60px;
+  box-sizing: border-box;
+  margin: 10px auto 0 auto;
+}
+
+section.index-page {
+  background-color: #d3d3d3;
+  border-radius: 10px 10px 0 0;
+}
+section.index-page header .container {
+  background-color: white;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 50%;
+}
+section.index-page header .container .logo {
+  font-size: 24px;
+  color: #6982e1;
+  min-width: fit-content;
+}
+section.index-page header .container .flex-container {
+  display: flex;
+  justify-content: space-between;
+  width: -webkit-fill-available;
+}
+section.index-page section.main-container {
+  padding: 20px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+section.index-page section.main-container .flex-container {
+  display: flex;
+}
+section.index-page section.main-container .flex-container img {
+  width: 30%;
+}
+section.index-page section.main-container .flex-container .text-container {
+  padding-left: 20px;
+  width: -webkit-fill-available;
+}
+section.index-page section.main-container .flex-container .text-container h1 {
+  text-align: center;
+  margin: 0 0 15px;
+  font-size: 24px;
+}
+section.index-page section.main-container .flex-container .text-container p {
+  font-size: 18px;
+}
+
+/*# sourceMappingURL=style.css.map */

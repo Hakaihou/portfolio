@@ -1,6 +1,13 @@
 html {
-  background-color: #e5e5e5;
+  background-color: #141414;
+  background-image: -o-radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
   font-family: "Montserrat", sans-serif;
+  color: white;
+}
+html h1, html h2 {
+  font-weight: 600;
 }
 html a {
   text-decoration: none;
@@ -8,56 +15,166 @@ html a {
 }
 
 body {
-  max-width: 1600px;
-  padding: 0 60px;
+  max-width: 1200px;
   box-sizing: border-box;
-  margin: 10px auto 0 auto;
+  margin: 36px auto 0 auto;
 }
 
-section.index-page {
-  background-color: #d3d3d3;
-  border-radius: 10px 10px 0 0;
-}
-section.index-page header .container {
-  background-color: white;
-  border-radius: 10px 10px 0 0;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  padding: 15px;
+section.index-page header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
-  gap: 50%;
-}
-section.index-page header .container .logo {
-  font-size: 24px;
-  color: #6982e1;
-  min-width: fit-content;
-}
-section.index-page header .container .flex-container {
-  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
-  width: -webkit-fill-available;
+  margin-bottom: 120px;
 }
-section.index-page section.main-container {
-  padding: 20px;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+section.index-page header .logo {
+  font-size: 28px;
+  font-weight: 600;
 }
-section.index-page section.main-container .flex-container {
+section.index-page header .navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  gap: 32px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 5px;
 }
-section.index-page section.main-container .flex-container img {
-  width: 30%;
+section.index-page header .flex-item {
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
 }
-section.index-page section.main-container .flex-container .text-container {
-  padding-left: 20px;
-  width: -webkit-fill-available;
+section.index-page header .flex-item:hover {
+  color: #6982e1;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
 }
-section.index-page section.main-container .flex-container .text-container h1 {
+section.index-page header .telegram {
+  margin-left: 78px;
+  background-color: #141414;
+  padding: 12px 24px;
+  border-radius: 100px;
+  border: 1px solid white;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+section.index-page header .telegram:hover {
+  background-color: #6982e1;
+  border: 1px solid #6982e1;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+section.index-page header .telegram:active {
+  background-color: #364da7;
+  border: 1px solid #364da7;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+section.index-page .main-container .about-me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+section.index-page .main-container .about-me img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+section.index-page .main-container .about-me h1 {
+  font-size: 32px;
+  margin: 0;
+}
+section.index-page .main-container .about-me p {
+  margin: 10px 0 0;
+  max-width: 650px;
   text-align: center;
-  margin: 0 0 15px;
-  font-size: 24px;
 }
-section.index-page section.main-container .flex-container .text-container p {
-  font-size: 18px;
+section.index-page .main-container .about-me a {
+  margin: 30px 0 160px;
+  background-color: white;
+  padding: 13px 24px;
+  border-radius: 100px;
+  color: black;
+  font-weight: 600;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+section.index-page .main-container .about-me a:hover {
+  background-color: #6982e1;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  color: white;
+}
+section.index-page .main-container .about-me a:active {
+  background-color: #364da7;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  color: white;
+}
+section.index-page .main-container .my-projects h2 {
+  margin: 0 0 52px;
+  font-size: 26px;
+}
+section.index-page .main-container .my-projects .flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+section.index-page .main-container .my-projects .flex-container .flex-item {
+  width: 584px;
+  height: 328px;
+  background-color: #1A1A1C;
+  border-radius: 16px;
+  color: #6982e1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 46px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+section.index-page .main-container .my-projects .flex-container .flex-item p {
+  font-size: 16px;
+  color: white;
+  margin: 5px 0 0;
+  font-weight: normal;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+section.index-page .main-container .my-projects .flex-container .flex-item:hover {
+  background-color: #1e1e20;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transform: translateY(-10px);
 }
 
 /*# sourceMappingURL=style.css.map */

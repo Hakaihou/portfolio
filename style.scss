@@ -1,6 +1,23 @@
+//variables
+$main-black: #141414;
+$alt-black: #1A1A1C;
+$alt-hover: #1e1e20;
+$main-hover: #6982e1;
+$main-active: #364da7;
+$main-transition: all 0.3s;
+
+
 html {
-  background-color: #e5e5e5;
+  background-color: $main-black;
+  background-image: -o-radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
   font-family: "Montserrat", sans-serif;
+  color: white;
+
+  & h1, h2 {
+    font-weight: 600;
+  }
 
   & a {
     text-decoration: none;
@@ -9,65 +26,188 @@ html {
 }
 
 body {
-  max-width: 1600px;
-  padding: 0 60px;
+  max-width: 1200px;
   box-sizing: border-box;
-  margin: 10px auto 0 auto;
+  margin: 36px auto 0 auto;
 }
 
 section.index-page {
-  background-color: #d3d3d3;
-  border-radius: 10px 10px 0 0;
+  & header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 120px;
 
-  header {
-    .container {
-      background-color: white;
-      border-radius: 10px 10px 0 0;
-      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-      padding: 15px;
+    .logo {
+      font-size: 28px;
+      font-weight: 600;
+    }
+
+    .navigation {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      gap: 32px;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
-      gap: 50%;
+      margin-top: 5px;
+    }
 
-      .logo {
-        font-size: 24px;
-        color: #6982e1;
-        min-width: fit-content;
+    .flex-item {
+      transition: $main-transition;
+      -webkit-transition: $main-transition;
+      -o-transition: $main-transition;
+
+      &:hover {
+        color: $main-hover;
+        transition: $main-transition;
+        -webkit-transition: $main-transition;
+        -o-transition: $main-transition;
+      }
+    }
+
+    .telegram {
+      margin-left: 78px;
+      background-color: $main-black;
+      padding: 12px 24px;
+      border-radius: 100px;
+      border: 1px solid white;
+      transition: $main-transition;
+      -webkit-transition: $main-transition;
+      -o-transition: $main-transition;
+
+
+      &:hover {
+        background-color: $main-hover;
+        border: 1px solid $main-hover;
+        transition: $main-transition;
+        -webkit-transition: $main-transition;
+        -o-transition: $main-transition;
       }
 
-      .flex-container {
-        display: flex;
-        justify-content: space-between;
-        width: -webkit-fill-available;
-
-        .flex-item {
-
-        }
+      &:active {
+        background-color: $main-active;
+        border: 1px solid $main-active;
+        transition: $main-transition;
+        -webkit-transition: $main-transition;
+        -o-transition: $main-transition;
       }
     }
   }
 
-  section.main-container {
-    padding: 20px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-
-    .flex-container {
+  .main-container {
+    .about-me {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+
       & img {
-        width: 30%;
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
       }
 
-      .text-container {
-        padding-left: 20px;
-        width: -webkit-fill-available;
-        & h1 {
-          text-align: center;
-          margin:0 0 15px;
-          font-size: 24px;
+      & h1 {
+        font-size: 32px;
+        margin: 0;
+      }
+
+      & p {
+        margin: 10px 0 0;
+        max-width: 650px;
+        text-align: center;
+      }
+
+      & a {
+        margin: 30px 0 160px;
+        background-color: white;
+        padding: 13px 24px;
+        border-radius: 100px;
+        color: black;
+        font-weight: 600;
+        transition: $main-transition;
+        -webkit-transition: $main-transition;
+        -o-transition: $main-transition;
+
+        &:hover {
+          background-color: $main-hover;
+          transition: $main-transition;
+          -webkit-transition: $main-transition;
+          -o-transition: $main-transition;
+          color: white;
         }
 
-        & p {
-          font-size: 18px;
+        &:active {
+          background-color: $main-active;
+          transition: $main-transition;
+          -webkit-transition: $main-transition;
+          -o-transition: $main-transition;
+          color: white;
+        }
+      }
+    }
+
+    .my-projects {
+      & h2 {
+        margin: 0 0 52px;
+        font-size: 26px;
+      }
+
+      .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 32px;
+
+        .flex-item {
+          width: 584px;
+          height: 328px;
+          background-color: $alt-black;
+          border-radius: 16px;
+          color: $main-hover;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          font-size: 46px;
+          font-weight: 600;
+          cursor:pointer;
+          transition: $main-transition;
+          -webkit-transition: $main-transition;
+          -o-transition: $main-transition;
+
+          & p {
+            font-size: 16px;
+            color: white;
+            margin: 5px 0 0;
+            font-weight: normal;
+            transition: $main-transition;
+            -webkit-transition: $main-transition;
+            -o-transition: $main-transition;
+          }
+
+          &:hover {
+            background-color: $alt-hover;
+            transition: $main-transition;
+            -webkit-transition: $main-transition;
+            -o-transition: $main-transition;
+            transform: translateY(-10px);
+          }
         }
       }
     }

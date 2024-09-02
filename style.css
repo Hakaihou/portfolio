@@ -20,12 +20,24 @@ html a {
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: calc(100vh - 34px);
   max-width: 1200px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 36px auto 0 auto;
 }
 
-section.index-page header {
+header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -37,11 +49,11 @@ section.index-page header {
   justify-content: space-between;
   margin-bottom: 120px;
 }
-section.index-page header .logo {
+header .logo {
   font-size: 28px;
   font-weight: 600;
 }
-section.index-page header .navigation {
+header .navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -51,24 +63,24 @@ section.index-page header .navigation {
   align-items: center;
   margin-top: 5px;
 }
-section.index-page header .flex-item {
+header .flex-item {
   transition: all 0.3s;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
 }
-section.index-page header .flex-item:hover {
+header .flex-item:hover {
   color: #6982e1;
   transition: all 0.3s;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
 }
-section.index-page header .flex-item:active {
+header .flex-item:active {
   color: #90a1ee;
   transition: all 0.3s;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
 }
-section.index-page header .telegram {
+header .telegram {
   margin-left: 78px;
   background-color: #141414;
   padding: 12px 24px;
@@ -78,20 +90,75 @@ section.index-page header .telegram {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
 }
-section.index-page header .telegram:hover {
+header .telegram:hover {
   background-color: #6982e1;
   border: 1px solid #6982e1;
   transition: all 0.3s;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
 }
-section.index-page header .telegram:active {
+header .telegram:active {
   background-color: #90a1ee;
   border: 1px solid #90a1ee;
   transition: all 0.3s;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
 }
+
+footer {
+  margin-bottom: 34px;
+}
+footer .flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 32px;
+}
+footer .flex-container .flex-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+footer .flex-container .flex-item svg path {
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+footer .flex-container .flex-item:hover {
+  color: #6982e1;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+footer .flex-container .flex-item:hover svg path {
+  fill: #6982e1;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+footer .flex-container .flex-item:active {
+  color: #90a1ee;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+footer .flex-container .flex-item:active svg path {
+  fill: #90a1ee;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+
 section.index-page .main-container .about-me {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -212,7 +279,10 @@ section.index-page .main-container .my-projects .flex-container .y-flights {
   color: #32a8dd;
 }
 section.index-page .main-container .my-skills .flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   gap: 31px;
   margin-bottom: 200px;
@@ -223,10 +293,15 @@ section.index-page .main-container .my-skills .flex-container .flex-item {
   background-color: #1A1A1C;
   border-radius: 12px;
   padding: 16px 24px 24px 24px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 section.index-page .main-container .my-skills .flex-container .flex-item p {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 16px;
   margin: 0;
@@ -235,7 +310,10 @@ section.index-page .main-container .my-skills .flex-container .flex-item p {
   margin-bottom: 24px;
 }
 section.index-page .main-container .my-skills .flex-container .flex-item .skills-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   gap: 12px;
 }
@@ -244,53 +322,129 @@ section.index-page .main-container .my-skills .flex-container .flex-item .skills
   background-color: rgba(105, 130, 225, 0.16);
   color: #6982e1;
   border-radius: 100px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   font-weight: 600;
 }
-section.index-page footer {
-  margin-bottom: 34px;
-}
-section.index-page footer .flex-container {
+
+section.project-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  gap: 32px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
-section.index-page footer .flex-container .flex-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+section.project-page section.main-container {
+  margin-bottom: 200px;
+}
+section.project-page section.main-container .intro {
+  margin-bottom: 52px;
+}
+section.project-page section.main-container .intro h1 {
+  font-weight: 600;
+  font-size: 42px;
+  margin: 0 0 32px;
+}
+section.project-page section.main-container .intro .site-link {
+  margin: 30px 0 0;
+  background-color: white;
+  padding: 13px 24px;
+  border-radius: 100px;
+  color: black;
+  font-weight: 600;
   transition: all 0.3s;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
 }
-section.index-page footer .flex-container .flex-item svg path {
+section.project-page section.main-container .intro .site-link:hover {
+  background-color: #6982e1;
   transition: all 0.3s;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
+  color: white;
 }
-section.index-page footer .flex-container .flex-item:hover {
+section.project-page section.main-container .intro .site-link:active {
+  background-color: #90a1ee;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  color: white;
+}
+section.project-page section.main-container .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+}
+section.project-page section.main-container .wrapper .flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+section.project-page section.main-container .wrapper .flex-container .flex-item {
+  width: 580px;
+}
+section.project-page section.main-container .wrapper .flex-container .flex-item span {
+  display: block;
+  color: #777777;
+  margin-bottom: 12px;
+}
+section.project-page section.main-container .wrapper .flex-container .flex-item p {
+  margin: 0 0 20px;
+}
+section.project-page section.main-container .wrapper .flex-container .flex-item a {
   color: #6982e1;
   transition: all 0.3s;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
 }
-section.index-page footer .flex-container .flex-item:hover svg path {
-  fill: #6982e1;
+section.project-page section.main-container .wrapper .flex-container .flex-item a:hover {
   transition: all 0.3s;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
-}
-section.index-page footer .flex-container .flex-item:active {
   color: #90a1ee;
+}
+section.project-page section.main-container .wrapper .flex-container .flex-item a:active {
+  background: rgba(144, 161, 238, 0.5);
   transition: all 0.3s;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
 }
-section.index-page footer .flex-container .flex-item:active svg path {
-  fill: #90a1ee;
-  transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
+section.project-page section.main-container .wrapper .flex-container .flex-item ul {
+  margin: 0 0 12px;
+  padding: 0;
+}
+section.project-page section.main-container .wrapper .flex-container .flex-item ul li:first-child {
+  margin-top: 6px;
+}
+section.project-page section.main-container .wrapper .flex-container .flex-item ul li {
+  margin-left: 25px;
+}
+
+@media (max-width: 1220px) {
+  section.index-page .main-container .my-projects h2 {
+    text-align: center;
+  }
+  section.index-page .main-container .my-projects .flex-container {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  section.index-page .main-container .my-skills h2 {
+    text-align: center;
+  }
+  section.index-page .main-container .my-skills .flex-container {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

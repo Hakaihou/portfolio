@@ -82,7 +82,7 @@
             <p>Я начинающий frontend-разработчик, увлеченный созданием удобных и адаптивных интерфейсов. На основе
                 приобретенного опыта, я стараюсь воплощать свои знания в реальных проектах. Постоянно учусь и стремлюсь
                 улучшать свои навыки, чтобы стать еще лучше в том, что я делаю.</p>
-            <a href="" target="_blank">Посмотреть резюме</a>
+            <a href="https://drive.google.com/file/d/13jT-KxvtCIkSgDBaV8Z4MKdTyCtMKX3f/view?usp=sharing" target="_blank">Посмотреть резюме</a>
         </div>
         <div class="my-projects" id="my-projects">
             <h2>Проекты</h2>
@@ -199,24 +199,5 @@
         </a>
     </div>
 </footer>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const anchor = window.location.hash;
-
-        const isNavigated = performance.getEntriesByType('navigation')[0].type === 'navigate';
-
-        if (anchor && isNavigated) {
-            const element = document.querySelector(anchor);
-            if (element) {
-                element.scrollIntoView({behavior: "smooth"});
-            }
-        }
-
-        window.history.replaceState({}, document.title, window.location.pathname + window.location.search);
-    });
-</script>
-
-
 </body>
 </html>

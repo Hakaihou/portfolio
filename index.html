@@ -199,5 +199,23 @@
         </a>
     </div>
 </footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const anchor = window.location.hash;
+
+        const isNavigated = performance.getEntriesByType('navigation')[0].type === 'navigate';
+
+        if (anchor && isNavigated) {
+            const element = document.querySelector(anchor);
+            if (element) {
+                element.scrollIntoView({behavior: "smooth"});
+            }
+        }
+
+        window.history.replaceState({}, document.title, window.location.pathname + window.location.search);
+    });
+</script>
+
 </body>
 </html>

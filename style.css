@@ -440,10 +440,6 @@ section.project-page section.main-container .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
   gap: 40px;
 }
 section.project-page section.main-container .wrapper .flex-container {
@@ -522,6 +518,13 @@ section.project-page section.main-container .wrapper .flex-container .flex-item 
   }
   section.index-page .main-container .my-projects h2 {
     text-align: center;
+  }
+  section.project-page section.main-container .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 24px;
   }
   section.index-page .main-container .my-projects .flex-container {
     display: -webkit-box;

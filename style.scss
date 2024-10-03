@@ -509,10 +509,6 @@ section.project-page {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
       gap: 40px;
 
       .flex-container {
@@ -610,6 +606,14 @@ section.project-page {
 
   section.index-page .main-container .my-projects h2 {
     text-align: center;
+  }
+
+  section.project-page section.main-container .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 24px;
   }
 
   section.index-page .main-container .my-projects .flex-container {

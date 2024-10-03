@@ -509,6 +509,10 @@ section.project-page {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
       gap: 40px;
 
       .flex-container {
@@ -519,10 +523,9 @@ section.project-page {
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
+        width: 50%;
 
         .flex-item {
-          width: 580px;
-
           & span {
             display: block;
             color: #999999;
@@ -602,7 +605,7 @@ section.project-page {
     margin-left: 0;
   }
   header .navigation {
-    gap: 20px;
+    gap: 15px;
   }
 
   section.index-page .main-container .my-projects h2 {
@@ -698,6 +701,13 @@ section.project-page {
 @media (max-width: 550px) {
   header .navigation .flex-item {
     display: none;
+  }
+
+  section.project-page section.main-container .intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   header .navigation {

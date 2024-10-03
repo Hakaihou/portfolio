@@ -514,9 +514,15 @@ section.project-page section.main-container .wrapper .flex-container .flex-item 
     margin-left: 0;
   }
   header .navigation {
-    gap: 15px;
+    gap: 10px;
   }
   section.index-page .main-container .my-projects h2 {
+    text-align: center;
+  }
+  section.project-page section.main-container .intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
   }
   section.project-page section.main-container .wrapper {
@@ -525,6 +531,9 @@ section.project-page section.main-container .wrapper .flex-container .flex-item 
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 24px;
+  }
+  section.project-page section.main-container .wrapper .flex-container {
+    width: auto;
   }
   section.index-page .main-container .my-projects .flex-container {
     display: -webkit-box;
@@ -599,12 +608,6 @@ section.project-page section.main-container .wrapper .flex-container .flex-item 
 @media (max-width: 550px) {
   header .navigation .flex-item {
     display: none;
-  }
-  section.project-page section.main-container .intro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
   }
   header .navigation {
     margin-top: 0;
